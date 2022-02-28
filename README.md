@@ -31,43 +31,41 @@ So, probably some new approach should be introduced eg: track media Sequences in
 I suppose this issue is related: https://github.com/videojs/http-streaming/issues/1224
 PS: It seems like `useNetworkInformationApi` and `experimentalBufferBasedABR` improve stability significantly, but still it fixes consequences - not a root cause.
 
-## Sources
-Is a certain source or a certain segment affected? please provide a public (accessible over the internet) link to it below.
 
 ## Steps to reproduce
-Explain in detail the exact steps necessary to reproduce the issue.
-
-1.
-2.
-3.
+I suppose, the easiest way is to throttle Network up and down during playback via chrome devtools.
 
 ## Results
-### Expected
-Please describe what you expected to happen that did not happen in the description.
+Random 1-5sec freezes during playback session which impact QoE.
 
-### Error output
-If there are any errors in the console, from the player, or anywhere else please include them here:
+### Expected
+Stream plays fine without freezing.
+
 
 ### videojs-http-streaming version
 what version of videojs-http-streaming does this occur with?
-videojs-http-streaming x.y.z
+
+I was testing videojs-http-streaming 2.9.2 and 2.13.1
 
 ### videojs version
 what version of videojs does this occur with?
-video.js x.y.z
+
+I was testing with videojs v7.14.3 (VHS v2.9.2) and v 7.18.0 (VHS v2.13.1)
 
 ### Browsers
 what browsers are affected? please include browser and version for each
-*
+
+I was testing on Chromium 72.0.3626.121(Linux) and 98.0.4758.109(MacOS)
 
 ### Platforms
 what platforms are affected? please include operating system and version or device and version for each
-*
+
+I was testing on MacOS and Linux
 
 ### Other Plugins
 are any other videojs plugins being used on the page? If so, please list them with version below.
-*
+* No other plugins.
 
 ### Other JavaScript
 are you using any other javascript libraries or frameworks on the page? if so please list them below.
-*
+* Issue occurs even without any other js libraries
